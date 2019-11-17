@@ -60,7 +60,7 @@ class DummyAuthorizer(DummyAuthorizer):
 		if self.USER_DATA[username]['password'] != password:
 			print("Password for user " + username + " is invalid")
 			raise AuthenticationFailed
-		# If the variable CREATE_FOLDER_IF_NOT_EXIST has been set on true, create a folder for the user if it doesn't already exist.
+		# If the variable CREATE_FOLDER_IF_NOT_EXIST has been set on True, create a folder for the user if it doesn't already exist.
 		if self.CREATE_FOLDER_IF_NOT_EXIST:
 			if not os.path.isdir(self.get_home_dir(username)):
 				os.mkdir(self.get_home_dir(username))
