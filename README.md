@@ -6,6 +6,8 @@ Open a terminal then create a virtualenv using `python3 -m venv env`.
 
 Then activate the virtualenv using `source env/bin/activate`.
 
+Make sure that the wheel Python package is installed: `pip install wheel`.
+
 Install the dependencies with `pip install pyftpdlib pyopenssl`.
 
 Make sure that you have generated the "cert.pem" and "privkey.pem" files before starting a TLS server version.
