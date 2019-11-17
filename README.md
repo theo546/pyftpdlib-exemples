@@ -8,7 +8,9 @@ Then activate the virtualenv using `source env/bin/activate`.
 
 Install the dependencies with `pip install pyftpdlib pyopenssl`.
 
-Make sure that you have generated the "cert.pem" and "privkey.pem" file before starting a TLS server version.
+Make sure that you have generated the "cert.pem" and "privkey.pem" files before starting a TLS server version.
+
+You can generate those files with this command: `openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 365 -nodes -out cert.pem -keyout privkey.pem`
 
 Then finally, run with `python *version you choosed*`.
 
