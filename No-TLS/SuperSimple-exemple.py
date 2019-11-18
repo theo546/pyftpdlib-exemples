@@ -15,7 +15,7 @@ USER_DIRECTORY = "/opt/ftpserver/"
 # This part has been copied and modified from the exemple here: https://pyftpdlib.readthedocs.io/en/latest/tutorial.html
 if __name__ == "__main__":
 	# If the choosed user directory doesn't end with a slash, add one.
-	if not USER_DIRECTORY.endswith('/'):
+	if not USER_DIRECTORY.endswith("/"):
 		USER_DIRECTORY = USER_DIRECTORY + "/"
 
 	# Instantiate a dummy authorizer for managing 'virtual' users

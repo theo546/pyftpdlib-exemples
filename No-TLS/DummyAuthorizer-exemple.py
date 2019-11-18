@@ -115,14 +115,14 @@ class DummyAuthorizer(DummyAuthorizer):
 
 if __name__ == "__main__":
 	# If the choosed user directory doesn't end with a slash, add one.
-	if not USER_DIRECTORY.endswith('/'):
+	if not USER_DIRECTORY.endswith("/"):
 		USER_DIRECTORY = USER_DIRECTORY + "/"
 
 	# If some folders in the user custom directories permissions end with a slash, remove it.
 	for KEY_USER, USER in USER_DATA.items():
 		if USER['custom_directories_permissions']:
 			for DIRECTORY in list(USER['custom_directories_permissions']):
-				if DIRECTORY.endswith('/'):
+				if DIRECTORY.endswith("/"):
 					USER_DATA[KEY_USER]['custom_directories_permissions'][DIRECTORY[:-1]] = USER_DATA[KEY_USER]['custom_directories_permissions'].pop(DIRECTORY)
 
 	# Instantiate a dummy authorizer for managing 'virtual' users
